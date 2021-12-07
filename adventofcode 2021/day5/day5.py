@@ -30,20 +30,36 @@ def to_mark(coords):
             for i in range(min(y),max(y)+1):
                 mark.append((x[0],i))
                 
-        if(y[0] == y[1]):
+        elif(y[0] == y[1]):
             for i in range(min(x),max(x)+1):
                 mark.append((i,y[0]))
+        
+        else:
+            m = (y[0] - y[1]) / (x[0] - x[1]);
+            c = y[0] - x[0] * m;
+    
+            for i in range(min(x), max(x)+1):
+                x_res = i
+                y_res = int(i*m + c, )
+                mark.append((x_res,y_res))
         
     return mark
         
 testing = get_list()
-part_1 = valids(testing)  
-marcas = to_mark(part_1)
-marcas = sorted(marcas)
+part_1 = sorted(to_mark(valids(testing)))
 
 import collections
-print(len([item for item, count in collections.Counter(marcas).items() if count > 1]))
+print(len([item for item, count in collections.Counter(part_1).items() if count > 1]))
 #6113
+
+
+### PART 2 ###
+
+part_2 = sorted(to_mark(testing))
+print(len([item for item, count in collections.Counter(part_2).items() if count > 1]))
+
+
+
 
 
         
