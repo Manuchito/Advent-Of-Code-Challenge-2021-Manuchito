@@ -31,22 +31,7 @@ for i in range(0,9):
         input_day6[i] = 0
     
 
-print("Part 1:", sum(solve(input_day6, 80).values())) #362740
+print("Part 2:", sum(solve(input_day6, 80).values())) #362740
 
 
 print("Part 2:",sum(solve(input_day6, 256).values())) # 1644874076764
-
-
-
-"""for i in range(256):
-    
-    eggs = fishes.count(0)
-    if eggs > 0:
-        for i in range(eggs):
-            fishes.append(9)
-        
-    fishes = [6 if fish == 0 else fish-1 for fish in fishes]
-    print(len(fishes))"""
-  
-  
-
