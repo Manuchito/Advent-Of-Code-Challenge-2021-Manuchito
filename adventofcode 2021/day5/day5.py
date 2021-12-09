@@ -57,7 +57,7 @@ print(len([item for item, count in collections.Counter(part_1).items() if count 
 
 part_2 = sorted(to_mark(testing))
 print(len([item for item, count in collections.Counter(part_2).items() if count > 1]))
-
+#20373
 
 
 
